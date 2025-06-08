@@ -1,7 +1,13 @@
-import math
+from math import *
 
-num = int(input("Enter a number: "))
+try:
+    num = int(input("Enter a number: "))
+    if num < 0:
+        print("Negative number not allowed")
+    else:
+        print("Square root:", sqrt(num))
+        print("Logarithm:", log(num))
+        print("Sine:", sin(num))
 
-print("Square root:", math.sqrt(num))
-print("Logarithm:", math.log(num))
-print("Sine:", math.sin(num))
+except ValueError:
+    print("Number not valid")
